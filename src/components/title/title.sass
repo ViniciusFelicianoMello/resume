@@ -1,0 +1,78 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+    
+.aside_title
+    position: relative
+    @include mixins.flex-center
+    flex-direction: column
+    width: 90%
+    height: 35%
+    border-bottom: 2px solid variables.$color-bg-1
+    margin: 7em 5% 0
+    body.dark-mode & 
+        border-bottom: 2px solid variables.$dark-color-bg-1
+
+.aside_img
+    position: absolute
+    width: 17vw
+    height: 17vw
+    overflow: hidden
+    @include mixins.border
+    top: -140% 
+    opacity: 0
+    animation: slideDown .7s .5s ease-out, opacity .7s .5s ease-out forwards
+
+    img
+        width: 100%
+
+.aside_name
+    display: flex
+    flex-direction: column
+
+    h2
+        color: variables.$color-1
+        font-size: 1.7vw
+        opacity: 0
+        animation: slideUp .7s .9s ease-out, opacity .7s .9s ease-out forwards
+
+    h3
+        color: variables.$color-2
+        font-size: 1.2vw
+        opacity: 0
+        animation: slideUp .7s 1.3s ease-out, opacity .7s 1.3s ease-out forwards
+
+.aside_link
+  margin-top: 1em
+  @include mixins.flex-center
+  gap: 2em
+
+  li
+    a
+      font-size: 1.3vw
+      @include mixins.border
+      @include mixins.flex-center
+      height: 3vw
+      width: 3vw
+      color: variables.$color-1
+      opacity: 0
+
+      &:hover
+        color: variables.$color-bg-2
+        @include mixins.gradient
+
+        body.dark-mode &
+          color: variables.$dark-color-bg-2
+
+    &:nth-of-type(1) a
+      animation: slideRight .7s 1.6s ease-out, opacity .7s 1.6s ease-out forwards
+
+    &:nth-of-type(2) a
+      animation: slideUp .7s 1.6s ease-out, opacity .7s 1.6s ease-out forwards
+
+    &:nth-of-type(3) a
+      animation: slideLeft .7s 1.6s ease-out, opacity .7s 1.6s ease-out forwards
+            
+            
+
+        

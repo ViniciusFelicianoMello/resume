@@ -1,0 +1,43 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.aside_infos
+    @include mixins.flex-center
+    margin-top: 2em
+    
+    ul
+        @include mixins.flex-center
+        align-items: start
+        flex-direction: column
+        gap: 1em
+
+        a
+            @include mixins.flex-center
+            gap: 1em
+            color: variables.$color-font
+            transition: all .3s
+            opacity: 0
+            body.dark-mode & 
+                color: variables.$dark-color-font
+            
+            &:hover
+                border-bottom: 1px solid variables.$color-2
+                transform: translateY(-.2em)
+            &:hover span
+                @include mixins.gradient_text
+            &:hover i
+                color: variables.$color-2
+            i
+                color: variables.$color-1
+
+    li:nth-of-type(1)
+        a
+            animation: slideUp .7s 1.3s ease-out, opacity .7s 1.3s ease-out forwards
+
+    li:nth-of-type(2)
+        a
+            animation: slideUp .7s 1.7s ease-out, opacity .7s 1.7s ease-out forwards
+
+    li:nth-of-type(3)
+        a
+            animation: slideUp .7s 2s ease-out, opacity .7s 2s ease-out forwards

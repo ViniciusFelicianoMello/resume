@@ -1,0 +1,36 @@
+@use 'variables'
+@use 'keyframes'
+  
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin border
+  border-radius: 1rem
+  box-shadow: 0px 0px 10px variables.$color-shadow
+  body.dark-mode & 
+    box-shadow: 0px 0px 10px variables.$dark-color-shadow
+
+  &:hover 
+    box-shadow: 0px 0px 15px variables.$color-shadow
+    transform: scale(1.01)
+    body.dark-mode & 
+      box-shadow: 0px 0px 15px variables.$dark-color-shadow
+  
+@mixin gradient
+  background: variables.$gradient-1
+  background-size: 400% 100%
+  background-position: 0% 50%
+  animation: btn 5s linear infinite
+
+@mixin gradient_text
+  background: variables.$gradient-1
+  background-size: 400% 100%
+  background-position: 0% 50%
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  color: transparent
+  animation: btn 5s linear infinite
+  transition: all .5s

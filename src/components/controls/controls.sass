@@ -1,0 +1,73 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.page_controls
+    position: absolute
+    @include mixins.flex-center
+    flex-direction: column
+    left: 1.2em
+    top: 1.5em
+
+    .controls_dark
+        position: relative
+        @include mixins.flex-center
+        opacity: 0
+        animation: opacity .7s 1.0s ease-out forwards
+        
+        .fa-moon
+            display: none
+        
+        input:checked + label
+            .fa-sun
+                display: none
+            .fa-moon
+                display: block
+        
+        label
+            font-size: 1.5vw
+            position: absolute
+            cursor: pointer
+            transition: all .3s
+            &:hover
+                color: variables.$color-2
+                transform: translateY(-.1em)
+
+    .controls_lenguage
+        position: relative
+        @include mixins.flex-center
+        transform: translateY(-40%)
+        z-index: 1
+        opacity: 0
+        animation: opacity .7s 1.8s ease-out forwards
+
+        .lenguage_country
+            background: red
+            height: 1.6vw
+            width: 1.6vw
+            cursor: pointer
+            overflow: hidden
+            border-radius: 50%
+            transition: all .3s
+            &:hover
+                transform: translateY(-.1em)
+
+        
+    .controls_download
+        position: relative
+        @include mixins.flex-center
+        margin: 2em 0 2em
+        opacity: 0
+        animation: opacity .7s 1.4s ease-out forwards
+        a
+            font-size: 1.5vw
+            cursor: pointer
+            color: variables.$color-font
+            transition: all .3s
+            &:hover
+                color: variables.$color-2
+                transform: translateY(-.1em)
+            body.dark-mode & 
+                color: variables.$dark-color-font
+                &:hover
+                    color: variables.$color-2
