@@ -21,6 +21,7 @@ const Title = ({ socialLinks }) => {
           <li key={index}>
             <a href={link.href} target="_blank" rel="noopener noreferrer">
               <i className={link.icon}></i>
+              <span>{link.tag}</span>
             </a>
           </li>
         ))}

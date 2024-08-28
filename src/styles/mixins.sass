@@ -34,3 +34,22 @@
   color: transparent
   animation: btn 5s linear infinite
   transition: all .5s
+
+@mixin box
+  display: flex
+  flex-shrink: 0
+  flex-direction: column
+  padding: 1vw
+  opacity: 0
+
+@mixin box_title
+  color: variables.$color-1
+  font-weight: Bolder
+  font-size: 1.5vw
+  border-bottom: 2px solid variables.$color-1
+  max-width: max-content
+
+@mixin box_title_hover
+  color: variables.$color-2
+  border-bottom: 2px solid variables.$color-2
+  

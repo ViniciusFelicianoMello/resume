@@ -49,6 +49,7 @@
 
   li
     a
+      position: relative
       font-size: 1.3vw
       @include mixins.border
       @include mixins.flex-center
@@ -72,6 +73,20 @@
 
     &:nth-of-type(3) a
       animation: slideLeft .7s 1.6s ease-out, opacity .7s 1.6s ease-out forwards
+
+    span
+      position: absolute
+      font-size: 1vw
+      opacity: 0
+      visibility: hidden
+      top: 70%
+      color: variables.$color-1
+      transition: all .3s
+    
+    &:hover span
+      opacity: 1
+      visibility: visible
+      top: 110%
             
             
 

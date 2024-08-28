@@ -1,0 +1,55 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.language
+    @include mixins.box
+    @include mixins.border
+    width: 38%
+    height: 35%
+    animation: slideUp .7s .8s ease-out, opacity .7s .8s forwards
+    h2
+        @include mixins.box_title
+    &:hover h2
+        @include mixins.box_title_hover
+
+    .language_item 
+        display: flex
+        flex-direction: column
+        margin-top: 1em
+
+        .language_item_text
+            display: flex
+            justify-content: space-between
+            align-items: center
+            font-size: 1vw
+            font-weight: 400
+        
+        .language_bar
+            display: flex
+            position: relative
+            margin-top: .3em
+            span
+                position: absolute
+                height: .4em
+                width: 100%
+                border-radius: 1em
+                background: variables.$color-bg-1
+                z-index: 1
+                body.dark-mode & 
+                    background: variables.$dark-color-bg-1
+            .native_bar
+                width: 97%
+                @include mixins.gradient
+                z-index: 2
+                body.dark-mode & 
+                    @include mixins.gradient
+                    
+
+            .advanced_bar
+                width: 80%
+                @include mixins.gradient
+                z-index: 2
+                body.dark-mode & 
+                    @include mixins.gradient
+                    

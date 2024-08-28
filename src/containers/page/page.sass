@@ -1,3 +1,20 @@
 @use '../../styles/variables'
 @use '../../styles/mixins'
 @use '../../styles/keyframes'
+
+.page
+    position: relative
+    display: flex
+    flex-shrink: 0
+    flex-wrap: wrap
+    gap: 1em
+    width: 70%
+    height: 90vh
+    padding: 3vw 2vw
+    background: variables.$color-bg-2
+    @include mixins.border
+    opacity: 0
+    animation: slideLeft .7s ease-out, opacity .7s ease-out forwards
+    overflow: hidden
+    body.dark-mode & 
+        background: variables.$dark-color-bg-2
