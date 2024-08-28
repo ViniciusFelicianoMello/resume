@@ -1,0 +1,32 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.education
+    @include mixins.box
+    @include mixins.border
+    width: 35%
+    height: 24%
+    margin-top: -16.5%
+    animation: slideUp .7s 2s ease-out, opacity .7s 2s forwards
+    h2
+        @include mixins.box_title
+    &:hover h2
+        @include mixins.box_title_hover
+    .education_content
+        display: flex
+        flex-direction: column-reverse
+        @include mixins.scroll-box
+        .education_item
+            @include mixins.box_item
+            cursor: auto
+            &:hover h3
+                color: variables.$color-1                
+            &:hover h4
+                color: variables.$color-1                
+            h3
+                @include mixins.item_h3
+            h4
+                @include mixins.item_h3
+                font-size: .8vw
+

@@ -1,0 +1,35 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.experience
+    @include mixins.box
+    @include mixins.border
+    width: 33%
+    height: 62%
+    animation: slideUp .7s 1.7s ease-out, opacity .7s 1.7s forwards
+    h2
+        @include mixins.box_title
+    &:hover h2
+        @include mixins.box_title_hover
+    .experience_content
+        display: flex
+        flex-direction: column-reverse
+        @include mixins.scroll-box
+        .experience_item
+            @include mixins.box_item
+            &:hover h3
+                color: variables.$color-1                
+            &:hover h4
+                color: variables.$color-1                
+            h3
+                @include mixins.item_h3
+            h4
+                @include mixins.item_h3
+                font-size: .8vw
+            .dropdown_content
+                display: flex
+                flex-direction: column
+                p
+                    font-size: .9vw
+                    margin-top: .2em

@@ -1,0 +1,38 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.courses
+    @include mixins.box
+    @include mixins.border
+    width: 28%
+    height: 62%
+    animation: slideUp .7s 1.4s ease-out, opacity .7s 1.4s forwards
+    h2
+        @include mixins.box_title
+    &:hover h2
+        @include mixins.box_title_hover
+    .courses_content
+        @include mixins.scroll-box
+        .courses_item
+            @include mixins.box_item
+            &:hover h3
+                color: variables.$color-1  
+            h3
+                @include mixins.item_h3
+                padding-right: 1vw
+                i
+                    position: absolute
+                    right: .2em
+                    z-index: 2
+                    color: variables.$color-1
+                    transition: all .3s
+                    &:hover
+                        color: variables.$color-2
+                        transform: translateY(.1em)
+            .dropdown_content
+                display: flex
+                flex-direction: column
+                p
+                    font-size: .9vw
+                    margin-top: .2em
