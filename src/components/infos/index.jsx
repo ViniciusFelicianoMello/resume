@@ -28,6 +28,13 @@ const Infos = () => {
               <span>{t('location')}</span>
           </a>
         </li>
+        {/* ITEM */}
+        <li>
+          <a href='#'>
+              <i className="fa-regular fa-calendar"></i>
+              <span>06 / 09 / 1999</span>
+          </a>
+        </li>
       </ul>
     </div>
   )
