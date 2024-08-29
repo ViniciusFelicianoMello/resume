@@ -88,6 +88,67 @@
       visibility: visible
       top: 110%
             
-            
+@media (max-width: 1024px)
+  .aside_title
+      width: 60%
+      height: 100%
+      margin: 0
 
-        
+  .aside_img
+      width: 17vw
+      height: 17vw
+      top: 9%
+      left: 0
+
+  .aside_name
+    margin-left: 22%
+    h2
+      font-size: 3vw
+    h3
+      font-size: 2.7vw
+
+  .aside_link
+    li
+      a
+        font-size: 2.5vw
+        height: 4vw
+        width: 4vw
+        &:hover
+      span
+        font-size: 2vw
+        opacity: 0
+@media (max-width: 600px)
+  .aside_title
+      flex-direction: row
+      width: 95%
+      height: 100%
+      margin: 0 2.5%
+      gap: 2em
+
+  .aside_img
+      position: relative
+      width: 23vw
+      height: 23vw
+      top: 0
+      left: 0
+
+  .aside_name
+    margin-left: 0
+    h2
+      font-size: 3.6vw
+    h3
+      font-size: 3vw
+
+  .aside_link
+    flex-direction: column
+    margin: 0
+    gap: 1.7vh
+    li
+      a
+        font-size: 2.5vw
+        height: 4vw
+        width: 4vw
+        &:hover
+      span
+        font-size: 2vw
+        opacity: 0

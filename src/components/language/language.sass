@@ -52,4 +52,21 @@
                 z-index: 2
                 body.dark-mode & 
                     @include mixins.gradient
-                    
+@media (max-width: 1024px)
+    .language
+        width: 29%
+        height: 25%
+        .language_item 
+            .language_item_text
+                font-size: 1.5vw
+@media (max-width: 600px)
+    .language
+        width: 35%
+        height: 23%
+        .language_item 
+            .language_item_text
+                font-size: 2vw
+            .language_bar
+                span
+                    height: .2em
+

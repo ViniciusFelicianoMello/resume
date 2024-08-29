@@ -20,7 +20,7 @@ const Courses = ({ courses }) => {
               <h3>{t(course.title)} <a href={course.certificateLink} download>
                   <i className="fa-solid fa-file-arrow-down"></i></a>
               </h3>
-              <div className="dropdown_content" style={{ transition: 'all .5s', maxHeight: expandedIndex === index ? '10vw' : '0', overflow: 'hidden', }}>
+              <div className="dropdown_content" style={{ transition: 'all .5s', maxHeight: expandedIndex === index ? '30vh' : '0', overflow: 'hidden', }}>
                   <p>{t(course.description)}</p>
               </div>
             </div>

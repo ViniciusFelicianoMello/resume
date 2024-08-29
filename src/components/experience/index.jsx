@@ -18,7 +18,7 @@ const Experience = ({ experience }) => {
                 <div className="experience_item dropdown" onClick={() => toggleDropdown(index)} key={index}>
                     <h3>{t(experience.title)}</h3>
                     <h4>{t(experience.position)}</h4>
-                    <div className="dropdown_content" style={{ transition: 'all .5s', maxHeight: expandedIndex === index ? '15vw' : '0', overflow: 'hidden', }}>
+                    <div className="dropdown_content" style={{ transition: 'all .5s', maxHeight: expandedIndex === index ? '30vh' : '0', overflow: 'hidden', }}>
                         <p>{t(experience.infos)}</p>
                     </div>
                 </div>

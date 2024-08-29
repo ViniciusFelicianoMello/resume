@@ -16,6 +16,8 @@
     box-shadow: 0px 0px 15px variables.$color-shadow  
     body.dark-mode & 
       box-shadow: 0px 0px 15px variables.$dark-color-shadow
+  @media (max-width: 1024px) 
+    border-radius: .5rem
   
 @mixin gradient
   background: variables.$gradient-1
@@ -40,6 +42,8 @@
   flex-direction: column
   padding: 1vw
   opacity: 0
+  @media (max-width: 1024px)
+    padding: 2vw
 
 @mixin scroll-box
   overflow: scroll
@@ -62,6 +66,9 @@
   border-bottom: 2px solid variables.$color-1
   max-width: max-content
   margin-bottom: .5em
+  @media (max-width: 1024px)
+    font-size: 3vw
+
 @mixin box_title_hover
   color: variables.$color-2
   border-bottom: 2px solid variables.$color-2
@@ -81,4 +88,6 @@
   font-size: .9vw
   &:hover
       color: variables.$color-1
+  @media (max-width: 1024px)
+    font-size: 2vw
   

@@ -3,6 +3,7 @@
 @use '../../styles/keyframes'
 
 .experience
+    position: relative
     @include mixins.box
     @include mixins.border
     width: 33%
@@ -33,3 +34,18 @@
                 p
                     font-size: .9vw
                     margin-top: .2em
+@media (max-width: 1024px)
+    .experience
+        width: 50%
+        height: 24%
+        margin-top: -47%
+        .experience_content
+            .experience_item
+                .dropdown_content
+                    p
+                        font-size: 2vw
+@media (max-width: 600px)
+    .experience
+        width: 48%
+        height: 26%
+        margin-top: 0

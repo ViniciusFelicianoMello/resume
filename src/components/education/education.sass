@@ -3,6 +3,7 @@
 @use '../../styles/keyframes'
 
 .education
+    position: relative
     @include mixins.box
     @include mixins.border
     width: 35%
@@ -29,4 +30,14 @@
             h4
                 @include mixins.item_h3
                 font-size: .8vw
-
+@media (max-width: 1024px)
+    .education
+        width: 50%
+        height: 20.7%
+        margin-top: -23.5%
+@media (max-width: 600px)
+    .education
+        width: 48%
+        height: 20.7%
+        margin-left: 52%
+        margin-top: -39%

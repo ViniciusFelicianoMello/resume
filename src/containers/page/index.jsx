@@ -55,6 +55,16 @@ const Page = () => {
       certificateLink: '/pdf/certificate/Desenvolva aplicações Web com JavaScript - Alura.pdf',
     },
     {
+      title: 'courseTitleReact',
+      description: 'courseDescReact',
+      certificateLink: '/pdf/certificate/Explore React com JavaScript - Alura.pdf',
+    },
+    {
+      title: 'courseTitleAngular',
+      description: 'courseDescAngular',
+      certificateLink: '/pdf/certificate/Angular crie aplicações web ágeis - Alura.pdf',
+    },
+    {
       title: 'courseTitle5',
       description: 'courseDesc5',
       certificateLink: '/pdf/certificate/Python com Orientação a Objetos - Alura.pdf',
